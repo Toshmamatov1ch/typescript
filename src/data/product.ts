@@ -1,0 +1,40 @@
+import { Products } from "@/types/product";
+
+export const products = [
+  {
+    id: 1,
+    title: "iPhone 16 Pro",
+    brand: "Apple",
+    price: 1200,
+    stock: 15,
+    category: "Smartphone",
+    rating: 4.9,
+    color: "Black",
+    warranty: "1 Year",
+    isAvailable: true,
+  },
+  {
+    id: 2,
+    title: "Galaxy S25",
+    brand: "Samsung",
+    price: 1100,
+    stock: 20,
+    category: "Smartphone",
+    rating: 4.8,
+    color: "Silver",
+    warranty: "1 Year",
+    isAvailable: true,
+  },
+  {
+    id: 3,
+    title: "MacBook Pro M4",
+    brand: "Apple",
+    price: 2500,
+    stock: 5,
+    category: "Laptop",
+    rating: 5,
+    color: "Space Gray",
+    warranty: "2 Years",
+    isAvailable: false,
+  },
+];

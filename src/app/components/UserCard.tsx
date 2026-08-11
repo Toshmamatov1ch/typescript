@@ -1,44 +1,56 @@
 import React from "react";
-import { Users } from "../../types/user";
+import { User } from "@/types/users";
 
 interface UserCardProps {
-  user: Users;
+  user: User;
 }
 
-export const UserCard = ({ user }: UserCardProps) => {
+export const UserCard: React.FC<UserCardProps> = ({ user }) => {
   return (
-    <div className="border rounded-xl p-5 shadow-sm hover:shadow-md transition bg-white flex flex-col gap-3">
-      <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold text-gray-800">{user.name}</h2>
-        <span
-          className={`px-2.5 py-1 text-xs font-medium rounded-full ${
-            user.isActive
-              ? "bg-green-100 text-green-700"
-              : "bg-red-100 text-red-700"
-          }`}
-        >
-          {user.isActive ? "Active" : "Inactive"}
-        </span>
-      </div>
-
-      <p className="text-sm text-gray-600">{user.email}</p>
-
-      <div className="text-xs font-medium text-gray-500 uppercase tracking-wider">
-        Role: <span className="text-gray-800 capitalize">{user.role}</span>
-      </div>
-
-      <div className="mt-2">
-        <p className="text-xs text-gray-500 mb-1">Skills:</p>
-        <div className="flex flex-wrap gap-1.5">
-          {user.skills.map((skill, index) => (
-            <span
-              key={index}
-              className="px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs"
-            >
-              {skill}
-            </span>
-          ))}
+    <div className="bg-white border rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+      <div>
+        <div className="flex justify-between items-start mb-3">
+          <div>
+            <h3 className="text-xl font-bold text-gray-800">
+              {user.name} {user.surname}
+            </h3>
+            <p className="text-sm font-medium text-indigo-600">
+              {user.profession}
+            </p>
+          </div>
+          <span
+            className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
+              user.isActive
+                ? "bg-green-100 text-green-700"
+                : "bg-red-100 text-red-700"
+            }`}
+          >
+            {user.isActive ? "Faol" : "Infaol"}
+          </span>
         </div>
+
+        <div className="space-y-1.5 text-sm text-gray-600 border-t pt-3">
+          <p>
+            <span className="font-medium text-gray-700">Yoshi:</span> {user.age}{" "}
+            da
+          </p>
+          <p>
+            <span className="font-medium text-gray-700">Email:</span>{" "}
+            {user.email}
+          </p>
+          <p>
+            <span className="font-medium text-gray-700">Tel:</span> {user.phone}
+          </p>
+          <p>
+            <span className="font-medium text-gray-700">Manzil:</span>{" "}
+            {user.address}
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-4 pt-3 border-t flex items-center justify-between">
+        <span className="text-xs text-gray-500">Oylik maosh:</span>
+        <span className="text-lg font-bold text-gray-900">${user.salary}</span>
       </div>
     </div>
   );

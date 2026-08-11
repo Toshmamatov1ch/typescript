@@ -1,12 +1,40 @@
-import { Users } from "../types/user";
+import { Users } from "@/types/users";
 
-export const users: Users[] = [
+export const users: Users = [
   {
     id: 1,
-    name: "Diyorbek",
-    email: "diyorbek@example.com",
-    role: "admin",
+    name: "Ali",
+    surname: "Valiyev",
+    age: 20,
+    email: "ali@gmail.com",
+    phone: "+998901112233",
+    address: "Farg'ona",
+    profession: "Frontend Developer",
     isActive: true,
-    skills: ["React", "Next.js", "Tailwind"],
+    salary: 500,
+  },
+  {
+    id: 2,
+    name: "Vali",
+    surname: "Karimov",
+    age: 22,
+    email: "vali@gmail.com",
+    phone: "+998909998877",
+    address: "Toshkent",
+    profession: "Backend Developer",
+    isActive: false,
+    salary: 700,
+  },
+  {
+    id: 3,
+    name: "Hasan",
+    surname: "Aliyev",
+    age: 25,
+    email: "hasan@gmail.com",
+    phone: "+998935556677",
+    address: "Andijon",
+    profession: "UI Designer",
+    isActive: true,
+    salary: 600,
   },
 ];

@@ -1,0 +1,40 @@
+import { Cars } from "@/types/car";
+
+export const cars = [
+  {
+    id: 1,
+    brand: "Chevrolet",
+    model: "Cobalt",
+    year: 2024,
+    color: "White",
+    price: 14000,
+    mileage: 0,
+    fuel: "Petrol",
+    transmission: "Automatic",
+    isAvailable: true,
+  },
+  {
+    id: 2,
+    brand: "Chevrolet",
+    model: "Tracker",
+    year: 2023,
+    color: "Black",
+    price: 22000,
+    mileage: 12000,
+    fuel: "Petrol",
+    transmission: "Automatic",
+    isAvailable: true,
+  },
+  {
+    id: 3,
+    brand: "Kia",
+    model: "K5",
+    year: 2024,
+    color: "Gray",
+    price: 32000,
+    mileage: 5000,
+    fuel: "Hybrid",
+    transmission: "Automatic",
+    isAvailable: false,
+  },
+];
